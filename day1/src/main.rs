@@ -4,11 +4,7 @@ use std::path::PathBuf;
 use std::cmp::{Ordering, Reverse};
 
 fn main() {
-    let wd = env::current_dir().unwrap();
-    println!("Hello, world! From {:?}", wd);
-
     let file_path = PathBuf::from("day1/resources/input.txt");
-
     let data_raw = fs::read_to_string(file_path).unwrap();
 
     let data = data_raw.lines().fold(vec![0], |acc, e| {
